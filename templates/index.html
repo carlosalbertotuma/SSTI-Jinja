@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Python Attack</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Estilos para a imagem */
+        img {
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 20px;
+        }
+
+        /* Estilos para o formulário */
+        form {
+        text-align: center;
+        margin-top: 10px;
+        }
+
+
+        pre {
+        background-color: #f5f5f5;
+        padding: 5px;
+        border-radius: 5px;
+        }
+        /* Estilos para os elementos de cabeçalho (h1, h2, h3, h4, ...) */
+        h1, h2, h3, h4, h5, h6 {
+        margin: 0; /* Remove as margens externas */
+        padding: 0; /* Remove o espaçamento interno */
+        margin-bottom: 0px; /* Adicione uma margem inferior pequena entre os cabeçalhos */
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>SSTI Jinja - Code Reuse Attack</h1>
+    <h1> RCE - Reverse Shell</h1>
+    <img src="{{ url_for('static', filename='1.png') }}" alt="Imagem" width="200">
+    <h3>Utilizando as subclass do python</h3>
+    <h3>Execute um RCE - Reverse Shell</h3>
+    <form method="POST">
+        <label for="codigo">Dynamic:</label>
+        <input type="text" id="codigo" name="codigo" required>
+        <button type="submit">Executar</button>
+    </form>
+    {% if output %}
+    <h2>Resultado:</h2>
+    <pre>{{ output }}</pre>
+    {% endif %}
+</body>
+
+</html>
