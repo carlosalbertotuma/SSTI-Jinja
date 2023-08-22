@@ -17,6 +17,6 @@ python3 app.py
 
 acesse o navegador: http://127.0.0.1:5000 
 
-Good Look
+Good Luck
 
 ![image](https://github.com/carlosalbertotuma/SSTI-Jinja/assets/13341724/68a5af7c-b054-4379-8499-78975a05a9cc)
